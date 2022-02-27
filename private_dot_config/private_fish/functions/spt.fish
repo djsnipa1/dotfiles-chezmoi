@@ -1,0 +1,3 @@
+function spt
+  startSpotify
+end

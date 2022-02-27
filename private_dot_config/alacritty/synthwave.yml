@@ -1,0 +1,29 @@
+# Colors (Synthwave '84')
+colors:
+  # Default colors
+  primary:
+    background: '0x262335'
+    foreground: '0xffffff'
+
+  # Normal colors
+  normal:
+    black:   '0x403E41'
+    red:     '0xfe4450'
+    green:   '0x72f1b8'
+    yellow:  '0xfede5d'
+    blue:    '0x03edf9'
+    magenta: '0xff7edb'
+    cyan:    '0x03edf9'
+    white:   '0xfcfcfc'
+
+  # Bright colors
+  bright:
+    black:   '0x727072'
+    red:     '0xfe4450'
+    green:   '0x72f1b8'
+    yellow:  '0xfede5d'
+    blue:    '0x03edf9'
+    magenta: '0xff7edb'
+    cyan:    '0x03edf9'
+    white:   '0xfcfcfc'
+

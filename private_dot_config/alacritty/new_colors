@@ -1,0 +1,17 @@
+colors:
+  # Default colours
+  primary:
+    background: '#1d001d'
+    foreground: '#0abdc6'
+
+  normal:
+    black:   '#202020'
+    red:     '#ff0000'
+    green:   '#d300c4'
+    yellow:  '#fd971f'
+    blue:    '#123e7c'
+    magenta: '#98ff46'
+    cyan:    '#0abdc6'
+    white:   '#d7d7d5'
+
+
