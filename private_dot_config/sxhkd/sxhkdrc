@@ -2,6 +2,10 @@
 # wm independent hotkeys
 #
 
+# splatmoji
+super + e
+  exec splatmoji copypaste
+
 # change wallpaper
 super + w
   feh --bg-fill --randomize ~/Pictures/wallpapers/*
