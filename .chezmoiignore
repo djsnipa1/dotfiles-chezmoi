@@ -1,0 +1,23 @@
+#!/bin/sh
+
+curl -sfL https://git.io/chezmoi | sh
+bin/chezmoi apply
+
+# if test ! -e /ide/bin/gp-code || test ! -v GITPOD_REPO_ROOT; then {   
+#   printf 'error: This script is meant to be run on Gitpod, quiting..
+# } fi                                                                  
+#                                                                        
+# _source_dir="$(readlink -f "$0")" && _source_dir="${_source_dir%/*}"; 
+# printf '%s\n' "$(< "$_source_dir/.gitconfig")" >> $HOME/.gitconfig    
+#                                                                       
+# sh -c "$(curl -fsLS chezmoi.io/get)" -- init --apply https://github.co
+#                                                                       
+# chezmoi update           
+# 
+# {{ if ne .chezmoi.os "darwin" }}
+# Library/Application Support/App/file.conf
+# {{ end }}
+# {{ if ne .chezmoi.os "linux" }}
+# .config/app/file.conf
+# {{ end }}
+
