@@ -1,3 +1,3 @@
 function ll --wraps=ls
-    cd (llama $argv);
+  exa --long --header --inode --git
 end
