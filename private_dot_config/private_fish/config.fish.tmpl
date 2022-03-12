@@ -6,8 +6,8 @@ if status is-interactive
 
     # MY ABBREVIATIONS (expands on command line)
     # for copy and pasting to clipboard
-    abbr copy "xclip -selection c" # copy
-    abbr paste "xclip -selection c -o" # paste
+    #abbr copy "xclip -selection c" # copy
+    #abbr paste "xclip -selection c -o" # paste
 
 end
 
@@ -157,9 +157,11 @@ end
 ### # my aliases
 alias l=ls
 alias lg=lazygit
+alias cz=chezmoi
 alias r=ranger
 alias n=nnn
 alias ta='tmux attach'
+alias tanew='tmux new'
 alias ag='ag --ignore ~/.ignore'
 
 alias clear='echo -en "\x1b[2J\x1b[1;1H"'
