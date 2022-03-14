@@ -1,34 +1,53 @@
+# ┳━┓o┓━┓┳ ┳  ┏━┓┏━┓┏┓┓┳━┓o┏━┓
+# ┣━ ┃┗━┓┃━┫  ┃  ┃ ┃┃┃┃┣━ ┃┃ ┳
+# ┇  ┇━━┛┇ ┻  ┗━┛┛━┛┇┗┛┇  ┇┇━┛
+
 if status is-interactive
     # Commands to run in interactive sessions can go here
-
     # add to path
-    #    set PATH /home/chad/.local/bin /home/chad/scripts /home/chad/.npm/bin /home/chad/.local/share/pnpm $N_PREFIX/bin $PATH
+    set -gx PATH /home/chad/.local/bin /home/chad/scripts /home/chad/.npm/bin /home/chad/.local/share/pnpm $N_PREFIX/bin $PATH
 
     # MY ABBREVIATIONS (expands on command line)
     # for copy and pasting to clipboard
     #abbr copy "xclip -selection c" # copy
     #abbr paste "xclip -selection c -o" # paste
-
 end
 
+# ┌─┐┬─┐┬─┐┬─┐┌┐┐o┌┐┐┌─┐
+# │ ┬│┬┘├─ ├─  │ │││││ ┬
+# ┆─┘┆└┘┴─┘┴─┘ ┆ ┆┆└┘┆─┘
+
 function fish_greeting
-  echo ""
-  echo "    ▄▖    ▌   ▖ ▘      " | lolcat -r
-  echo "    ▌▌▛▘▛▘▛▌  ▌ ▌▛▌▌▌▚▘" | lolcat -r
-  echo "    ▛▌▌ ▙▖▌▌  ▙▖▌▌▌▙▌▞▖" | lolcat -r
+  # echo " ┬─┐┬─┐┌─┐┬ ┬  ┬  o┌┐┐┬ ┐┐ │ " | lolcat -r
+  # echo " │─┤│┬┘│  │─┤  │  │││││ │┌┼┘ " | lolcat -r
+  # echo " ┘ ┆┆└┘└─┘┆ ┴  ┆─┘┆┆└┘┆─┘┆ └ " | lolcat -r
+  figlet -f rustofat "Arch Linux" | lolcat -r
   chafa ~/Pictures/chad.png --size=30
-  figlet -f rustofat "Chad Boyce" | lolcat -r
+  figlet -f rusto "Chad Boyce" | lolcat -r
   set -l cols (tput cols)
   seq 1 $cols | sort -R | spark | lolcat -r
 end
 
-# If you want to add the dirs to your PATH variable when using a login shell, add this to your ~/.config/fish/config.fish file: 
-# source man fish-doc
-if status --is-login
-  set -gx PATH /home/chad/.local/bin /home/chad/scripts /home/chad/.npm/bin /home/chad/.local/share/pnpm $N_PREFIX/bin $PATH
+# ┌─┐┬─┐┌┐┐o┌─┐┌┐┐┐─┐
+# │ ││─┘ │ ││ ││││└─┐
+# ┘─┘┆   ┆ ┆┘─┘┆└┘──┘
+
+# set either default emacs mode or vi mode 
+function fish_user_key_bindings
+  fish_vi_key_bindings
 end
 
-#  SET GLOBAL VARIABLES
+# If you want to add the dirs to your PATH variable when using 
+# a login shell, add this to your ~/.config/fish/config.fish file: 
+# source man fish-doc
+if status --is-login
+  # set -gx PATH /home/chad/.local/bin /home/chad/scripts /home/chad/.npm/bin /home/chad/.local/share/pnpm $N_PREFIX/bin $PATH
+  fish_add_path /home/chad/.local/bin /home/chad/scripts /home/chad/.npm/bin /home/chad/.local/share/pnpm $N_PREFIX/bin $PATH
+end
+
+# ┌─┐┬  ┌─┐┬─┐┬─┐┬    ┐ ┬┬─┐┬─┐o┬─┐┬─┐┬  ┬─┐┐─┐
+# │ ┬│  │ ││─││─┤│    │┌┘│─┤│┬┘││─┤│─││  ├─ └─┐
+# ┆─┘┆─┘┘─┘┆─┘┘ ┆┆─┘  └┘ ┘ ┆┆└┘┆┘ ┆┆─┘┆─┘┴─┘──┘
 
 # tell sxhkd to use bash to do commands
 set -U SXHKD_SHELL sh
@@ -50,16 +69,15 @@ set -xg EDITOR nvim  # sets the variable as global export
 set -e VISUAL
 set -xg VISUAL nvim  
 
-
-### "bat" as manpager
+# "bat" as manpager
 set -x MANPAGER "sh -c 'col -bx | bat -l man -p'"
 
-### SET EITHER DEFAULT EMACS MODE OR VI MODE ###
-function fish_user_key_bindings
-  fish_vi_key_bindings
-end
+# END ALIASES
 
-### SPARK ###
+# ┐─┐┬─┐┬─┐┬─┐┬┌ 
+# └─┐│─┘│─┤│┬┘├┴┐
+# ──┘┆  ┘ ┆┆└┘┆ ┘
+
 set -g spark_version 1.0.0
 
 complete -xc spark -n __fish_use_subcommand -a --help -d "Show usage help"
@@ -111,10 +129,13 @@ function spark -d "sparkline generator"
         }
     '
 end
-### END OF SPARK ###
+# END OF SPARK #
 
-### FUNCTIONS ###
-# Spark functions
+# ┬─┐┬ ┐┌┐┐┌─┐┌┐┐o┌─┐┌┐┐┐─┐
+# ├─ │ │││││   │ ││ ││││└─┐
+# ┆  ┆─┘┆└┘└─┘ ┆ ┆┘─┘┆└┘──┘
+
+# Spark functions ? not sure if this goes here
 function letters
     cat $argv | awk -vFS='' '{for(i=1;i<=NF;i++){ if($i~/[a-zA-Z]/) { w[tolower($i)]++} } }END{for(i in w) print i,w[i]}' | sort | cut -c 3- | spark | lolcat
     printf  '%s\n' 'abcdefghijklmnopqrstuvwxyz'  ' ' | lolcat
@@ -152,9 +173,12 @@ else
   bind ! __history_previous_command
   bind '$' __history_previous_command_arguments
 end
-### END OF FUNCTIONS ###
+# END OF FUNCTIONS #
 
-### # my aliases
+# ┌┌┐┐ ┬  ┬─┐┬  o┬─┐┐─┐┬─┐┐─┐
+# │││└┌┘  │─┤│  ││─┤└─┐├─ └─┐
+# ┘ ┆ ┆   ┘ ┆┆─┘┆┘ ┆──┘┴─┘──┘
+
 alias l=ls
 alias lg=lazygit
 alias cz=chezmoi
