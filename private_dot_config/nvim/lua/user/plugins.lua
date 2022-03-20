@@ -108,6 +108,9 @@ return packer.startup(function(use)
     -- MarkdownPreview
   use { 'iamcco/markdown-preview.nvim', ft = 'markdown', run = 'cd app && yarn install' }
 
+  -- fish file type
+  use { 'dag/vim-fish' }
+
   -- sixteen-color-table
   use "mvanderkamp/sixteen-colour-table"
 
