@@ -116,6 +116,9 @@ return packer.startup(function(use)
 
   use "Zabanaa/neuromancer.vim"
 
+  -- for chezmoi dotfiles
+  use { "alker0/chezmoi.vim" }
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then

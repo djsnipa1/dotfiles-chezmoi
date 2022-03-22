@@ -22,7 +22,8 @@ function fish_greeting
   # echo " │─┤│┬┘│  │─┤  │  │││││ │┌┼┘ " | lolcat -r
   # echo " ┘ ┆┆└┘└─┘┆ ┴  ┆─┘┆┆└┘┆─┘┆ └ " | lolcat -r
   figlet -f rustofat "Arch Linux" | lolcat -r
-  chafa ~/Pictures/chad.png --size=30
+  # chafa ~/Pictures/chad.png --size=30
+  chafa --size=30 (random choice ~/Pictures/chadmoji/*.png)
   figlet -f rusto "Chad Boyce" | lolcat -r
   set -l cols (tput cols)
   seq 1 $cols | sort -R | spark | lolcat -r
