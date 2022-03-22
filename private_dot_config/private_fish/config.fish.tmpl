@@ -73,7 +73,7 @@ set -xg VISUAL nvim
 # "bat" as manpager
 set -x MANPAGER "sh -c 'col -bx | bat -l man -p'"
 
-# END ALIASES
+# END VARIABLES
 
 # ┐─┐┬─┐┬─┐┬─┐┬┌ 
 # └─┐│─┘│─┤│┬┘├┴┐
@@ -182,7 +182,11 @@ end
 
 alias l=ls
 alias lg=lazygit
-alias cz=chezmoi
+# alias cz=chezmoi
+abbr cz chezmoi 
+alias cdiff='chezmoi diff'
+alias capp='chezmoi apply'
+alias cman='chezmoi managed'
 alias r=ranger
 alias n=nnn
 alias ta='tmux attach'

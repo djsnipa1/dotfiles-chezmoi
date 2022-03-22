@@ -3,6 +3,7 @@
 SETUVAR SXHKD_SHELL:sh
 SETUVAR __fish_initialized:3100
 SETUVAR _fish_abbr_copy:xclip\x20\x2dselection\x20c
+SETUVAR _fish_abbr_cz:chezmoi
 SETUVAR _fish_abbr_getclip:xclip\x20\x2dselection\x20c\x20\x2do
 SETUVAR _fish_abbr_paste:xclip\x20\x2dselection\x20c\x20\x2do
 SETUVAR _fish_abbr_pbcopy:xclip\x20\x2dselection\x20c

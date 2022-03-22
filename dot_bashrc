@@ -1,0 +1,22 @@
+
+#export EDITOR=nvim
+#export VISUAL=nvim
+export LC_TERMIMAL=ShellFish
+
+alias v=nvim
+
+source $HOME/.shellfishrc
+source /etc/profile
+source ~/.functions
+
+# alias pbpaste="xclip -selection c -o"
+alias open="xdg-open"
+
+source /home/chad/.config/broot/launcher/bash/br
+
+# This may or may not work
+if shopt -q login_shell && [ -n "$SSH_CLIENT" ]; then
+    tmux attach || tmux
+fi
+
+eval "$(starship init bash)"
