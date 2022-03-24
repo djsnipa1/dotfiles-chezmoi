@@ -1,0 +1,47 @@
+# Cyberpunk-Neon colours
+colors:
+  # Default colours
+  primary:
+    background: '#1c1c1c'
+    foreground: '#d0d0d0'
+
+  # Colors that should be used to draw the terminal cursor. If these are unset,
+  # the cursor colour will be the inverse of the cell colour.
+  cursor:
+    text: '#1c1c1c'
+    cursor: '#d0d0d0'
+
+  # Normal colors
+  normal:
+    black:   '#1c1c1c'
+    red:     '#af005f'
+    green:   '#5faf00'
+    yellow:  '#d7af5f'
+    blue:    '#5fafd7'
+    magenta: '#808080'
+    cyan:    '#d7875f'
+    white:   '#d0d0d0'
+
+  # Bright colors
+  bright:
+    black:   '#585858'
+    red:     '#5faf5f'
+    green:   '#afd700'
+    yellow:  '#af8767'
+    blue:    '#ffaf00'
+    magenta: '#ff5faf'
+    cyan:    '#00afaf'
+    white:   '#5f8787'
+
+  # dim colors
+  # dim:
+  #   black:   '#1c61c2'
+  #   red:     '#ff0000'
+  #   green:   '#d300c4'
+  #   yellow:  '#f57800'
+  #   blue:    '#123e7c'
+  #   magenta: '#711c91'
+  #   cyan:    '#0abdc6'
+  #   white:   '#d7d7d5'
+
+
