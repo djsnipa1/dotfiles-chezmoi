@@ -138,6 +138,9 @@ return packer.startup(function(use)
 	-- for chezmoi dotfiles
 	use({ "alker0/chezmoi.vim" })
 
+	-- colorizer
+  use({ "norcalli/nvim-colorizer.lua"})
+
 	-- sixteen-color-table
 	use("mvanderkamp/sixteen-colour-table")
 
